@@ -124,27 +124,32 @@
 					<description>Maven Recipe: RPM Package.</description>
 					<mappings>
 						<mapping>
-							<directory>/root/.jenkins/jobs/push_verification_job/workspace/src/</directory>
+							<directory>/home/production/tomcat/webapps/</directory>
+							<directoryIncluded>false</directoryIncluded>
 							<dependency>
 								<excludes>
-									<exclude>org.mockito:mockito-all</exclude>
-									<exclude>junit:junit</exclude>
-									<exclude>mysql:mysql-connector-java</exclude>
-									<exclude>com.sun.jersey:jersey-bundle</exclude>
-									<exclude>com.sun.jersey:jersey-server</exclude>
-									<exclude>com.sun.jersey:jersey-json</exclude>
-									<exclude>com.sun.jersey:jersey-client</exclude>
+									<!-- <exclude>org.mockito:mockito-all</exclude> <exclude>junit:junit</exclude> 
+										<exclude>mysql:mysql-connector-java</exclude> <exclude>com.sun.jersey:jersey-bundle</exclude> 
+										<exclude>com.sun.jersey:jersey-server</exclude> <exclude>com.sun.jersey:jersey-json</exclude> 
+										<exclude>com.sun.jersey:jersey-client</exclude> -->
 									<exclude>*:*</exclude>
 								</excludes>
 								<includes>
-								<include>com:emp</include>
+									<include>com:emp</include>
 								</includes>
 							</dependency>
 							<artifact />
 						</mapping>
-						<!-- <mapping> <directory>/home/clduser/conf</directory> <configuration>true</configuration> 
-							<sources> <source> <location>/home//conf/app.properties</location> <destination>app.sample.properties</destination> 
-							</source> </sources> </mapping> -->
+						<mapping>
+							<directory>/home/clduser/conf</directory>
+							<configuration>true</configuration>
+							<sources>
+								<source>
+									<location>/home/conf/app.properties</location>
+									<destination>app.sample.properties</destination>
+								</source>
+							</sources>
+						</mapping>
 						<mapping>
 							<directory>/home/tomcat/logs</directory>
 						</mapping>
