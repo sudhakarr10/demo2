@@ -25,27 +25,13 @@
 			<version>5.1.38</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-bundle</artifactId>
-			<version>1.18</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
-			<version>1.18</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-json</artifactId>
-			<version>1.18</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<version>1.18</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency> <groupId>com.sun.jersey</groupId> <artifactId>jersey-bundle</artifactId> 
+			<version>1.18</version> </dependency> <dependency> <groupId>com.sun.jersey</groupId> 
+			<artifactId>jersey-server</artifactId> <version>1.18</version> </dependency> 
+			<dependency> <groupId>com.sun.jersey</groupId> <artifactId>jersey-json</artifactId> 
+			<version>1.18</version> </dependency> <dependency> <groupId>com.sun.jersey</groupId> 
+			<artifactId>jersey-client</artifactId> <version>1.18</version> <scope>test</scope> 
+			</dependency> -->
 	</dependencies>
 	<scm>
 		<connection>scm:git:file://localhost/d:/git_repo/central1.git</connection>
@@ -68,7 +54,7 @@
 		<maven.build.timestamp.format>dd-MM-yyyy</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
@@ -125,7 +111,13 @@
 					<mappings>
 						<mapping>
 							<directory>/root/.jenkins/jobs/push_verification_job/workspace/src/</directory>
-							<dependency />
+							<dependency>
+								<excludes>
+									<exclude>org.mockito:mockito-all</exclude>
+									<exclude>junit:junit</exclude>
+									<exclude>mysql:mysql-connector-java</exclude>
+								</excludes>
+							</dependency>
 							<artifact />
 						</mapping>
 						<!-- <mapping> <directory>/home/clduser/conf</directory> <configuration>true</configuration> 
