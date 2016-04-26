@@ -155,7 +155,18 @@
 							<directory>/home/tomcat/logs</directory>
 						</mapping>
 					</mappings>
-
+					<preinstallScriptlet>
+						<script>/etc/init.d/tomcat5 stop</script>
+					</preinstallScriptlet>
+					<postinstallScriptlet>
+						<script>
+							echo "removing deploy folder content"
+							rm -rf /home/tomcat/deploy/ 
+							echo "removing work"
+							rm -rf /home/tomcat/work/
+							/etc/init.d/tomcat5 start
+						</script>
+					</postinstallScriptlet>
 				</configuration>
 			</plugin>
 		</plugins>
