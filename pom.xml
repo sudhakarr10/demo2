@@ -25,13 +25,27 @@
 			<version>5.1.38</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>com.sun.jersey</groupId> <artifactId>jersey-bundle</artifactId> 
-			<version>1.18</version> </dependency> <dependency> <groupId>com.sun.jersey</groupId> 
-			<artifactId>jersey-server</artifactId> <version>1.18</version> </dependency> 
-			<dependency> <groupId>com.sun.jersey</groupId> <artifactId>jersey-json</artifactId> 
-			<version>1.18</version> </dependency> <dependency> <groupId>com.sun.jersey</groupId> 
-			<artifactId>jersey-client</artifactId> <version>1.18</version> <scope>test</scope> 
-			</dependency> -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-bundle</artifactId>
+			<version>1.18</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.18</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.18</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.18</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<scm>
 		<connection>scm:git:file://localhost/d:/git_repo/central1.git</connection>
@@ -116,6 +130,11 @@
 									<exclude>org.mockito:mockito-all</exclude>
 									<exclude>junit:junit</exclude>
 									<exclude>mysql:mysql-connector-java</exclude>
+									<exclude>com.sun.jersey:jersey-bundle</exclude>
+									<exclude>com.sun.jersey:jersey-server</exclude>
+									<exclude>com.sun.jersey:jersey-json</exclude>
+									<exclude>com.sun.jersey:jersey-client</exclude>
+									
 								</excludes>
 							</dependency>
 							<artifact />
