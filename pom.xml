@@ -143,6 +143,7 @@
 						<mapping>
 							<directory>/home/prod/tomcat/prod-conf/</directory>
 							<configuration>true</configuration>
+							<directoryIncluded>false</directoryIncluded>
 							<sources>
 								<source>
 									<location>/root/.jenkins/jobs/Build_job/workspace/src/main/resources/demo.conf</location>
