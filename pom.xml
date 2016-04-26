@@ -141,12 +141,12 @@
 							<artifact />
 						</mapping>
 						<mapping>
-							<directory>/home/clduser/conf</directory>
+							<directory>/home/prod/tomcat/prod-conf/</directory>
 							<configuration>true</configuration>
 							<sources>
 								<source>
-									<location>/home/conf/app.properties</location>
-									<destination>app.sample.properties</destination>
+									<location>/root/.jenkins/jobs/Build_job/workspace/src/main/resourcesapp/demo.conf</location>
+									<destination>/home//home/prod/tomcat/prod-conf/demo1.conf</destination>
 								</source>
 							</sources>
 						</mapping>
