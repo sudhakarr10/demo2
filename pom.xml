@@ -146,7 +146,7 @@
 							<sources>
 								<source>
 									<location>/root/.jenkins/jobs/Build_job/workspace/src/main/resources/demo.conf</location>
-									<destination>/home/prod/tomcat/prod-conf/demo1.conf</destination>
+									<destination>/home/prod/tomcat/prod-conf/demo.conf</destination>
 								</source>
 							</sources>
 						</mapping>
