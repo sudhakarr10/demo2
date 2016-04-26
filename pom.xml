@@ -134,8 +134,11 @@
 									<exclude>com.sun.jersey:jersey-server</exclude>
 									<exclude>com.sun.jersey:jersey-json</exclude>
 									<exclude>com.sun.jersey:jersey-client</exclude>
-									
+									<exclude>*:*</exclude>
 								</excludes>
+								<includes>
+								<include>com:emp</include>
+								</includes>
 							</dependency>
 							<artifact />
 						</mapping>
